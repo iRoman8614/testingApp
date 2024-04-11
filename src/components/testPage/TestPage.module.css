@@ -1,0 +1,40 @@
+.root {
+  margin: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+
+.root * {
+  font-size: 20px;
+}
+
+.testName {
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.title {
+  padding-top: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.tip {
+  margin: 0;
+}
+
+.answer {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.buttonset {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px
+}
+
+
+
