@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {mock} from '../../mock/TestContent'
-import {Timer} from "../timer/Timer";
+import {Timer} from '../timer/Timer';
 
-import styles from "./TestPage.module.css"
+import styles from './TestPage.module.css'
 
 interface Props {
     testId: string;
@@ -138,8 +138,8 @@ export const TestPage:React.FC<Props> = ({testId}) => {
                 )}
 
                 <div className={styles.buttonset}>
-                    <button type="button" onClick={() => handlePrev(1)}>Previous</button>
-                    <button type="button" onClick={() => handleNext(1)}>Next</button>
+                    <button type="button" onClick={() => handlePrev(1)}>Предыдущий</button>
+                    <button type="button" onClick={() => handleNext(1)}>Следующий</button>
                 </div>
             </form>
         </div>

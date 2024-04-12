@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {TestPage} from "../testPage/TastPage";
+import {TestPage} from "../testPage/TestPage";
 import {ResultPage} from "../resultPage/ResultPage";
 import {mock} from '../../mock/TestContent'
 
@@ -8,7 +8,7 @@ import styles from './Layout.module.css'
 export const Layout:React.FC = () => {
     const [currentTest, setCurrentTest] = useState<string | null>(localStorage.getItem('test'));
 
-    const handleTestChoise = (id: number) => {
+    const handleTestChoice = (id: number) => {
         localStorage.setItem('test', id.toString());
         setCurrentTest(localStorage.getItem('test'));
     }
@@ -34,7 +34,7 @@ export const Layout:React.FC = () => {
         <div className={styles.root}>
             {currentTest == null && mock.test.map((test)=> {
                 return(
-                    <div className={styles.testTitle} key={test.id} onClick={()=>{handleTestChoise(test.id)}}>{test.name}</div>
+                    <div className={styles.testTitle} key={test.id} onClick={()=>{handleTestChoice(test.id)}}>{test.name}</div>
                 )
             })}
             {currentTest == 'finished' && (<ResultPage />)}
